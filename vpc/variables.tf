@@ -8,7 +8,7 @@ variable "cidr_subnet" {
 }
 variable "availability_zone" {
   description = "availability zone to create subnet"
-  default = "ap-northeast-1"
+  default = "ap-northeast-1a"
 }
 variable "public_key_path" {
   description = "Public key path"

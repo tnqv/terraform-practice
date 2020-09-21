@@ -4,7 +4,8 @@ resource "aws_route_table" "rtb_public" {
       cidr_block = "0.0.0.0/0"
       gateway_id = "${aws_internet_gateway.igw.id}"
   }
-  tags {
-    "Environment" = "${var.environment_tag}"
+  tags = {
+      Name = "rain-rt-test"
+      Value = var.environment_tag
   }
 }

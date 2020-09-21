@@ -3,7 +3,8 @@ resource "aws_subnet" "subnet_public" {
   cidr_block = "${var.cidr_subnet}"
   map_public_ip_on_launch = "true"
   availability_zone = "${var.availability_zone}"
-  tags {
-    "Environment" = "${var.environment_tag}"
+  tags = {
+      Name = "rain-subnet-test"
+      Value = var.environment_tag
   }
 }
